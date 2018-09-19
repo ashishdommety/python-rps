@@ -9,6 +9,8 @@
 
 import random 
 
+choices = ['r','p','s']
+
 def game():
   user = input("Do you want to play rock, paper, scissors? (y/n)\n")
   if user == "n":
@@ -22,33 +24,25 @@ def compareBoth(userPick):
   choices = ["r","p","s"]
   randomNumber = random.randrange(3)
   computerChoice = choices[randomNumber]
-  print("-" * 30)
-  print("You chose: " + userPick)
-  print("Computer chose: " + computerChoice)
 
-  if userPick == 'r': 
-    if computerChoice == 's':
+  if userPick != 'r' and userPick != 'p' and userPick != 's':
+    print("Invalid Option. Please choose only 'r', 'p' or 's'")
+  else: 
+    print("-" * 30)
+    print("You chose: " + userPick)
+    print("Computer chose: " + computerChoice)
+    
+    userIndex = choices.index(userPick)
+    computerIndex = choices.index(computerChoice)
+    diff = computerIndex - userIndex
+
+    if diff == 0:
+      print("Draw")
+    elif diff == -1:
       print("You win!")
-    elif computerChoice == 'p':
+    else: 
       print("You lose...")
-  
-  if userPick == 's':
-    if computerChoice == 'p':
-      print("You win!")
-    elif computerChoice == 'r':
-      print("You lose...")
-  
-  if userPick == 'p': 
-    if computerChoice == 'r':
-      print("You win!")
-    elif computerChoice == 's':
-      print("You lose...")
-  
-  if userPick == computerChoice:
-    print("Draw")
-  
-  if userPick != 'r' and userPick != 's' and userPick != 'p':
-    print("invalid character - please enter either 'r' 'p' or 's'")
+
   print("-" * 30)
 
 game()
