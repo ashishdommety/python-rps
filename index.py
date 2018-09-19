@@ -24,10 +24,10 @@ def compareBoth(userPick):
     userIndex = choices.index(userPick)
     computerIndex = choices.index(computerChoice)
     diff = computerIndex - userIndex
-
+    print("diff is ", diff)
     if diff == 0:
       print("Draw")
-    elif diff == -1:
+    elif diff < 0 or diff == 2:
       print("You win!")
     else: 
       print("You lose...")
