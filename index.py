@@ -1,15 +1,4 @@
-# ask user if they want to play 
-# get users response
-# if 'n' then say, "goodbye!"
-# if 'y' then,
-# get computers random response
-# ask for users response
-# compare both of them and display result
-# Ask user if they want to play
-
 import random 
-
-choices = ['r','p','s']
 
 def game():
   user = input("Do you want to play rock, paper, scissors? (y/n)\n")
@@ -31,7 +20,7 @@ def compareBoth(userPick):
     print("-" * 30)
     print("You chose: " + userPick)
     print("Computer chose: " + computerChoice)
-    
+
     userIndex = choices.index(userPick)
     computerIndex = choices.index(computerChoice)
     diff = computerIndex - userIndex
