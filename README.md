@@ -1,2 +1,2 @@
-# python-rps
-rock paper scissors in python!
+# Python RPS 🗻 📜 ✂️ 🐍
+A simple rock, paper, scissors command line game written in python!
